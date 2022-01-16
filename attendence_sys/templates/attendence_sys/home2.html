@@ -1,0 +1,117 @@
+{% extends 'attendence_sys/main.html' %} {% block content %}
+{% load static %} 
+
+<style>
+
+    *{
+      font-family: "poppins", sans-serif;
+    }
+    
+    .card-title{
+        font-weight: 600;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        text-transform: capitalize;
+    }
+    
+    .row .g-0{
+        padding: 10px;
+    }
+
+    .card.mb-3{
+        margin: 10px;
+        border-radius: 20px;
+        border-width: 5px 2px;
+        border-style: solid;
+        border-color: rgb(52, 52, 94);
+    }
+
+    
+    </style>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/attend.png' %}" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Take Attendence</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <a href="{% url 'attendence' %}" class="btn btn-block btn-info">Take Attendence</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/add.png' %}" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Add Student</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <a href="{% url 'home' %}" class="btn btn-block btn-info">Add Student</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/edit.png' %}" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Update Student Details</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <a href="{% url 'update_student_' %}" class="btn btn-block btn-info">Update Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/find.jpg' %}" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Search Attendence</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <a href="{% url 'searchattendence' %}" class="btn btn-block btn-info">Search Attendance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    
+
+  </div>
+</div>
+
+{% endblock %}
